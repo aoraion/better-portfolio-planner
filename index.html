@@ -85,6 +85,126 @@
             color: var(--text-muted);
         }
 
+        /* Marketing Hero Section */
+        .marketing-hero {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-dark) 50%, rgba(13, 202, 177, 0.05) 100%);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marketing-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(13, 202, 177, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .marketing-hero h2 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        .marketing-hero h2 span {
+            color: var(--teal);
+            text-shadow: 0 0 30px rgba(13, 202, 177, 0.4);
+        }
+
+        .marketing-hero h2 .strikethrough {
+            text-decoration: line-through;
+            color: var(--negative);
+            opacity: 0.8;
+        }
+
+        .marketing-hero .subhead {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 15px;
+            line-height: 1.6;
+        }
+
+        .marketing-hero .stat-callout {
+            font-size: 1.1rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        .marketing-hero .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            color: var(--bg-dark);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 16px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(13, 202, 177, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(13, 202, 177, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        .marketing-hero .creator-note {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .marketing-hero .creator-note a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        .marketing-hero .creator-note a:hover {
+            text-decoration: underline;
+        }
+
         /* Hero Section */
         .hero {
             padding: 60px 0 40px;
@@ -107,6 +227,170 @@
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 30px;
+        }
+
+        /* Bottom CTA Section */
+        .bottom-cta {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 30%, rgba(13, 202, 177, 0.08) 100%);
+            padding: 80px 0;
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            position: relative;
+        }
+
+        .bottom-cta::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(ellipse at bottom, rgba(13, 202, 177, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .bottom-cta h3 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .bottom-cta h3 span {
+            color: var(--teal);
+        }
+
+        .bottom-cta .description {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .bottom-cta .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .bottom-cta .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .bottom-cta .feature-item .icon {
+            color: var(--teal);
+            font-size: 1.3rem;
+        }
+
+        .bottom-cta .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .btn-youtube {
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+        }
+
+        .btn-youtube:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+        }
+
+        .bottom-cta .course-callout {
+            background: rgba(13, 202, 177, 0.1);
+            border: 1px solid var(--teal);
+            border-radius: 12px;
+            padding: 20px 30px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .bottom-cta .course-callout p {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .bottom-cta .course-callout .course-title {
+            color: var(--teal);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .marketing-hero {
+                padding: 50px 0;
+            }
+
+            .marketing-hero h2 {
+                font-size: 2rem;
+                padding: 0 15px;
+            }
+
+            .marketing-hero .subhead {
+                font-size: 1.1rem;
+                padding: 0 15px;
+            }
+
+            .marketing-hero .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+            }
+
+            .btn-primary, .btn-secondary, .btn-youtube {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .bottom-cta {
+                padding: 50px 0;
+            }
+
+            .bottom-cta h3 {
+                font-size: 1.8rem;
+                padding: 0 15px;
+            }
+
+            .bottom-cta .description {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .bottom-cta .cta-features {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .bottom-cta .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 20px;
+            }
         }
 
         /* Stats Cards */
@@ -599,6 +883,23 @@
         </div>
     </header>
 
+    <section class="marketing-hero">
+        <div class="container">
+            <h2>Stop Holding <span class="strikethrough">Losers</span>.<br>Start Building <span>Wealth</span>.</h2>
+            <p class="subhead">95% of altcoins underperform cycle-over-cycle. The data doesn't lie — and neither should your strategy.</p>
+            <p class="stat-callout">📊 See the proof below: Bitcoin degraded -68%, Ethereum -95%, Solana -94%</p>
+            <div class="cta-buttons">
+                <a href="https://thebettertraders.com" target="_blank" class="btn-primary">
+                    🎓 Learn the Strategy
+                </a>
+                <a href="https://youtube.com/@MooninPapa" target="_blank" class="btn-secondary">
+                    ▶️ Watch on YouTube
+                </a>
+            </div>
+            <p class="creator-note">Built by <a href="https://youtube.com/@MooninPapa" target="_blank">Aaron (Moonin Papa)</a> • Free course: "15 Minutes to Financial Freedom"</p>
+        </div>
+    </section>
+
     <section class="hero">
         <div class="container">
             <h2>Why <span>95%</span> of Coins Underperform Each Cycle</h2>
@@ -724,6 +1025,46 @@
                 </tbody>
             </table>
         </div>
+
+        <section class="bottom-cta">
+            <div class="container">
+                <h3>Ready to Build Your <span>Bear Market Portfolio</span>?</h3>
+                <p class="description">The numbers above tell the story — but knowing what to do about it is everything. Join thousands of traders who've learned to trade smarter, not harder.</p>
+                
+                <div class="cta-features">
+                    <div class="feature-item">
+                        <span class="icon">✓</span>
+                        <span>Data-driven strategies</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon">✓</span>
+                        <span>New listing playbooks</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon">✓</span>
+                        <span>Bear market preparation</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon">✓</span>
+                        <span>Community & support</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://thebettertraders.com" target="_blank" class="btn-primary">
+                        🚀 Join The Better Traders
+                    </a>
+                    <a href="https://youtube.com/@MooninPapa" target="_blank" class="btn-youtube">
+                        ▶️ Subscribe on YouTube
+                    </a>
+                </div>
+
+                <div class="course-callout">
+                    <p>Free course available:</p>
+                    <span class="course-title">"15 Minutes to Financial Freedom"</span>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
