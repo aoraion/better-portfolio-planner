@@ -744,6 +744,9 @@
         async function loadData() {
             try {
                 const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const data = await response.json();
                 coinData = data.coins;
                 
@@ -763,13 +766,16 @@
         // Format number
         function formatNumber(num, decimals = 2) {
             if (num === null || num === undefined) return 'N/A';
-            if (Math.abs(num) >= 1000000) {
-                return (num / 1000000).toFixed(1) + 'M';
+            // Ensure num is a number
+            const n = Number(num);
+            if (isNaN(n)) return 'N/A';
+            if (Math.abs(n) >= 1000000) {
+                return (n / 1000000).toFixed(1) + 'M';
             }
-            if (Math.abs(num) >= 1000) {
-                return (num / 1000).toFixed(1) + 'K';
+            if (Math.abs(n) >= 1000) {
+                return (n / 1000).toFixed(1) + 'K';
             }
-            return num.toFixed(decimals);
+            return n.toFixed(decimals);
         }
 
         // Get class based on value
